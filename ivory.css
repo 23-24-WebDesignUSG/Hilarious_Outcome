@@ -1,0 +1,36 @@
+h1{
+	font-size: 50px;
+	background-color: ivory;
+}
+h2{text-align: center;
+	font-size: 30px;
+}
+h2:hover{background-color: ivory;}
+
+p{font-size: 20px;
+	text-align: center;
+}
+h3{
+	display: block;
+	color: black;
+	text-align: center;
+	
+}
+.content{text-align: center;
+	color: brown;
+	font-family: cursive;
+	background-color: ivory;
+	font-size: 20px;
+	block-size: 100px;
+	border-top: dashed;
+	border-width: 5px;
+}
+.title{border-top: dotted;
+	border-width: 10px;
+	border-color: brown;
+}
+.citation{border-width:300px;
+	border-color: ivory;
+	background-color: ivory;
+}
+
