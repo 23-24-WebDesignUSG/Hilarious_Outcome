@@ -1,0 +1,99 @@
+body{
+	background-color: lightyellow;
+	font-family: cursive;
+}
+h1{
+	font-size: 50px;
+	border: double;
+	border-width: 10px;
+	border-color: lightblue;
+	border-radius: 25px
+	/*By doing this, a double lined rounded corner border was created*/
+}
+h1{
+	color: lightyellow;
+	transition: color: 3s;
+	transition-duration: 3s;
+	/*this make the title show after hoverover it*/
+}
+h1:hover{
+	color: white;
+	background-color: black;
+}
+h2{
+	font-size: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
+	color: lightblue;
+	border-radius: 25px;
+	transition: backgound-color:5s;
+	transition-duration: 5s;
+	/*I created a lightblue area that contains paragraph*/
+}
+h2:hover{
+	color: white;
+	background-color: black;
+
+}
+.context{
+	background-color: lightblue;
+	color: lightblue;
+	border-radius: 25px;
+	border-radius: 25px;
+	transition: color: 5s;
+	transition-duration: 5s;
+
+}
+.context:hover{
+	background-color: black;
+	color: white;
+}
+p, img, li{
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-bottom: 10px;
+	/*this made my context away from the edge of the page*/
+}
+.para{
+	font-size: 20px;
+	color: lightblue;
+	transition: color:5s;
+	transition-duration: 5s;
+	/*This make the words not showing at start*/
+}
+
+@keyframes image {
+	25%{opacity:100%}
+	50%{opacity:50%; background-image: url(bad.jpg)}
+	100%{opacity:0%;background-image: url(bad.jpg);}
+}
+/* this background image is from LinkedIn */ 
+.image:hover{
+	animation-name: image;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction:normal;
+	/*while hover over this image, backgroud image shown, they dissapear together, then repeat till stop hovering*/
+}
+.para:hover{
+	color: white;
+	/*this make the paragraphs showing*/
+}
+@keyframes con{
+	from {margin-right: 200px}
+	to {margin-left: 200px}
+}
+.pro{
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+	animation-name: con;
+/*this made the pro and con image moving from left to right*/
+}
+
+
+
