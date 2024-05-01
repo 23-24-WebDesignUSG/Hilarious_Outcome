@@ -1,0 +1,47 @@
+html{
+	background-color:#fae8ec;
+	text-align: center;
+	/*this change the background color and centered everything*/
+
+}
+body{
+	opacity: 25%;
+	transition: opacity:5s;
+	transition-duration: 3s;
+}
+body:hover{
+	opacity: 100%;
+}
+/*this is a transition of the entire webpage from low opacity to completely shown*/
+h1{
+	text-align: center;
+	font-size: 45px;
+}
+h2{
+	font-size: 30px;
+}
+img{
+	border-radius: 25px
+}
+button{
+	border-radius: 25px;
+}
+/*the border radiuses made the corner of the figures and images rounded*/
+
+label{
+	font-size: 20px;
+	text-wrap: pretty;
+}
+@keyframes image {
+	25%{opacity:0%}
+	50%{opacity:50%;}
+	100%{opacity:100%;}
+}
+/*this is a animation the make the images "blink"*/
+img:hover{
+	animation-name: image;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: once;
+	animation-direction:normal;
