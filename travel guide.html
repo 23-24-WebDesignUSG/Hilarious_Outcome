@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="travelguide.css">
+	<title>Summer Trip Planner</title>
+</head>
+
+<body>
+	<header>
+		<h1>Summer Trip Planner</h1>
+		<img src="trip.jpg" height="400px" width="1200px">
+	</header>
+
+<main>
+	<section id="location-selection"><!-- the use of section helped for identify id, instead of div-->
+		<!-- Section for selecting destination -->
+		<h2>Select Your Destination</h2>
+			<input type="text" id="destination" placeholder="Enter destination"><!-- the place holder is the text on when the textbox is empty, it could suggest the context user insert-->
+			<button onclick="setDestination()">Set Destination</button><br><br>
+	</section>
+	<img src="place.jpg" height="200px" width="600px"><br>
+
+	<section id="accommodation-selection">
+		<!-- Section for selecting accomodation -->
+		<h2>Choose Your Accommodations</h2>
+			<select id="accommodation">
+			<!-- Dropdown menu to select accommodation type -->
+				<option value="hotel">Hotel - $100/night</option>
+				<option value="hostel">Hostel - $50/night</option>
+				<option value="bnb">BnB - $75/night</option>
+			</select>
+			<button onclick="setAccommodation()">Set Accommodation</button>
+			<!-- Button to set the accommodation; triggers the setAccommodation function -->
+	</section>
+
+	<img src="hotel.jpg" height="200px" width="320px">
+	<img src="hostle.jpg" height="200px" width="320px">
+	<img src="bnb.jpg"height="200px" width="320px">
+
+	<section id="sights-selection">
+		<!-- Section for selecting sight -->
+		<h2>Select Sites to See</h2>
+			<label><input type="checkbox" value="museum" data-price="20"> Museum - $20 </label><!-- the the label is wrapping the input, then if your click the contest, then the checkbox is checked-->
+			<label><input type="checkbox" value="park" data-price="0"> Park - Free    </label>
+			<label><input type="checkbox" value="zoo" data-price="30"> Zoo - $30    </label>
+			<label><input type="checkbox" value="beach" data-price="200"> Beach - $200    </label>
+			<button onclick="addSights()">Add Sights</button>
+	</section>
+	<img src="musium.avif" height="180px" width="250px">
+	<img src="park.jpg" height="180px" width="250px">
+	<img src="zoo.jpg" height="180px" width="250px">
+	<img src="beach.webp" height="180px" width="250px">
+
+	<section id="summary">
+		<!-- Section to display trip summary -->
+		<h2>Trip Summary</h2>
+			<button onclick="displaySummary()">Show Summary</button>
+			<div id="summary-details"></div><!-- this is where the resulte shown-->
+	</section>
+</main>
+
+<script>
+// JavaScript object to store the details of the trip
+let trip = { 
+    destination: '',  // Destination 
+    accommodation: '',  // Accommodation
+    sights: [],  // elected sights
+    totalCost: 0  // Total cost of the trip
+};
+
+// Function to set the destination in the trip object
+function setDestination() {
+    // Get the value from the destination input 
+    trip.destination = document.getElementById('destination').value;
+    // Show alert to confirm the destination 
+    alert('Destination set!');
+}
+
+// Function to set the accommodation in the trip object and update the total cost
+function setAccommodation() {
+    // Get the selected accommodation from dropdown menu
+    trip.accommodation = document.getElementById('accommodation').value;
+    
+    // Define a dictionary for the cost 
+    const prices = { 
+        hotel: 100, 
+        hostel: 50, 
+        bnb: 75 
+    };
+    
+    // Add the cost of the accommodation to the total cost
+    trip.totalCost += prices[trip.accommodation];
+    // Show alert to confirm the accommodation 
+    alert('Accommodation set!');
+}
+
+// Function to add selected sights to the object and update the total cost
+function addSights() {
+    // Select all checked checkboxes within the sights-selection section
+    const checkboxes = document.querySelectorAll('#sights-selection input[type="checkbox"]:checked');
+    //leanred from joshuacolvin.com, querySelectorAll in this case helpped everything with the id #sight-selection that has the type of checkbox and was check appears as a serious of result, the selected result appear in array
+    
+    // checked checkbox
+    checkboxes.forEach(checkbox => {
+        // Add the value of the checkbox (sight name) 
+        trip.sights.push(checkbox.value);
+        // Add the price of the sight (price)
+        trip.totalCost += parseInt(checkbox.dataset.price);
+    });
+    // Show alert to confirm the sights 
+    alert('Sights added!');
+}
+
+// Function to display the summary of the trip
+function displaySummary() {
+    // Get the div element where the summary will be displayed
+    const summaryDiv = document.getElementById('summary-details');
+    
+    // Update the innerHTML of the summaryDiv to display trip details
+    summaryDiv.innerHTML = `
+        <p>Destination: ${trip.destination}</p>
+        <p>Accommodation: ${trip.accommodation}</p>
+        <p>Sights: ${trip.sights.join(', ')}</p> 
+        <p>Total Cost: $${trip.totalCost}</p>
+    `;//the "join(',')" helped the checked options appears in a,b, which make the context more organized.
+    //learned from teamtreehouse.com, the <p> make the contexts inside shown in paragraph form.
+}
+
+</script>
+
+</body>
+</html>
+

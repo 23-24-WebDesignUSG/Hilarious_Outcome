@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+main {
+    padding: 20px;
+}
+
+section { /* Styling for sections */
+   background-color: #d3f5dc;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+button { /*size of the context on button*/
+    font-size: 20px;
+}
+h2{
+    font-size: 30px;
+}
+input{
+    font-size: 20px;/*works oly for input*/
+}
+select{
+    font-size: 20px;
+}
+label{
+    font-size: 20px;
+    margin: 20px; /*space in between*/
+    text-align: inline;
+}
+p{
+    font-size: 25px;/*works for the p in the javascript*/
+}
+img{
+    margin: 25px; /*spacing between images*/
+}
+
+
