@@ -1,0 +1,64 @@
+.div1 {
+	text-align: center;
+	color: springgreen;
+	border: dotted;
+	background-color: lightgray;
+	/* 
+		transitions require defining a property that will
+		change AND a duration for how long it takes to
+		change. By default the transition does not create
+		the change. However if that property were to change,
+		the transition defines how long it takes.
+	*/
+	transition: color 4s, font-size 2s;
+}
+
+.div1:hover {
+	color: black;
+	font-size: 72px;
+}
+
+@keyframes stubbsAni {
+	0% {top: 0%; left: 0%}
+	25% {top: 20%; left: 74%}
+	50% {left: 50%}
+	75% {background-image: url("pixelCat.png"); width: 500px; height: 500px;}
+	100% {top: 0%; left: 0%}
+}
+
+.div2 {
+	background-image: url("stubbs.png");
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 300px;
+	position: relative;
+	/* Animations are all about defining key frames
+	key frames are what it is at a certain point within
+	the animation*/
+	animation-name: stubbsAni;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+@keyframes turtle {
+ 0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+.div3 {
+	animation-name: turtle;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+
+}
+
+
+
+
+
+
+

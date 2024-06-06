@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of webpages</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design Portfolio!!!</h1>
+    </header> <br><br>
+    <div class="menu"><h2>Project Menu</h2>
+    	<p onclick="Me()">About Me</p>
+        <p onclick="Animal()">Favorite Animal</p>
+        <p onclick="ivory()">Call to Action</p>
+        <p onclick="heritage()">Collector's Guide</p>
+        <p onclick="anonimity()">Social + Epical Issue of IT</p>
+        <p onclick="hunt()">Treasure Hunt</p>
+        <p onclick="quiz()">Buzzfeed Quiz</p>
+        <p onclick="travel()">Travel Guide</a><!-- menu used to switch between webpage and texts-->
+    </div>
+    <div class="info">
+    	<h2> About the Webpage</h2>
+    	<p id="text">
+    		This is the first project of the year which we present it to the class for self-introduction. We learned the basic html elements and attributes for example body, paragraph, unordered list, ordered list, and anchor with 'src' attribute attatched. We learned how to add images and put embed video to the webpage. Since this webpage was made before we learned how to use CSS code, spam and style were used widely in the format and color.
+    	</p>
+    </div>
+    <div class="frame">
+    	<iframe id="embededPage" src="About Me .html" width="800" height="600"></iframe>
+    </div>
+    <div class="option">
+    	<h2>Which One Do You Like the Best?</h2> <!-- a survey that used javascript-->
+    <ul>
+    	<li><label for="1" style="color: darkred;" > About Me</label>
+        <input id="1" type="radio" name="surveyOption"></li>
+
+        <li><label for="2" style="color: darkorange;"> Favorite Animal </label>
+        <input id="2" type="radio" name="surveyOption"></li>
+
+        <li><label for="3" style="color: darkblue;"> Call to Action </label>
+        <input id="3" type="radio" name="surveyOption"></li>
+
+        <li><label for="4" style="color: darkgreen;"> Collector's Guide </label>
+        <input id="4" type="radio" name="surveyOption"></li>
+
+        <li><label for="5" style="color: darkgreen;"> Social + Epical Issue of IT </label>
+        <input id="5" type="radio" name="surveyOption"></li>
+
+        <li><label for="6" style="color: darkgreen;"> Treasure Hunt </label>
+        <input id="6" type="radio" name="surveyOption"></li>
+
+        <li><label for="7" style="color: darkgreen;"> Buzzfeed Quiz </label>
+        <input id="7" type="radio" name="surveyOption"></li>
+
+        <li><label for="8" style="color: darkgreen;"> Travel Guide </label>
+        <input id="8" type="radio" name="surveyOption"></li>
+    </ul>
+<button onclick="showResult()">Submit</button>
+    <div id="surveyResult"></div>
+</div>
+    
+</body>
+  <script type="text/javascript">//when click on the menu option, corresponding webpage would jump out and text will change.
+  	function Me() {
+    document.getElementById('embededPage').src = "About Me .html";
+    document.getElementById('text').innerHTML = "This is the first project of the year which we present it to the class for self-introduction. We learned the basic html elements and attributes for example body, paragraph, unordered list, ordered list, and anchor with 'src' attribute attatched. We learned how to add images and put embed video to the webpage. Since this webpage was made before we learned how to use CSS code, spam and style were used widely in the format and color.";
+}
+	function Animal(){
+	document.getElementById('embededPage').src = "Capybara.html";
+	document.getElementById('text').innerHTML = "This webpage was not a project but a inclass assignment which I really enjoyed with. We used ordered lists and unordered list as tools to organize the informations in number and blilet points. We learned how to use both internal and external link that link to certain parts of the webpage and outside resources, respectively.";
+}
+	function ivory(){
+	document.getElementById('embededPage').src = "ivory.html";
+	document.getElementById('text').innerHTML = "This is the first project involves CSS code which we did basic CSS style in elements. We learned hover over certain context to let show differently. We ued navigation to make the unordered list in horizontal format and make them clickable so that when we click on it, it lead us to different part of the webpage based on the id we gave them. Additionally, the use of div and class attribute was developed through the CSS study.";
+}
+	function heritage(){
+	document.getElementById('embededPage').src = "intangible cultual heritage.html";
+	document.getElementById('text').innerHTML = "This webpage is one of the most complecated one we did because we did it as a group while we were unable to figure out how to share code instead of use one computer to write code. We created five different webpages which are one main introduction and four seperate topic under the main page. We used the same CSS code for the four subpage but change the context and color. In the main page, we used the element table and different other elements and attributes.";
+}
+	function anonimity(){
+	document.getElementById('embededPage').src = "Anonymity.html";
+	document.getElementById('text').innerHTML = "In this project, we learned about the ethic issue of IT and internet. We used animation and transition to make the webpage more interesting and diverse. Hover and color contrast were used in this project as a form to show the information and definition of the terms we did. We advanced our CSS skills in this project and developed more knowledge of attributes.";
+}
+	function hunt(){
+	document.getElementById('embededPage').src = "treasure hunt.html";
+	document.getElementById('text').innerHTML = "This is a homework assignment which we learned more about elements like table, attributes like hover, animation, and transition.";
+}
+	function quiz(){
+	document.getElementById('embededPage').src = "buzzquiz.html";
+	document.getElementById('text').innerHTML = "This is the project where we started using Javascript. As we were still using HTML and CSS code to basically structure the webpage and design it, Javascript attributes and functions were used to correspond to the label and input option that is used to generate result at the bottom of the webpage. Let and If statements were used to set certain option as different value to add up to other values that match the equation and inequality that would lead to the alert.";
+}
+	function travel(){
+	document.getElementById('embededPage').src = "travel guide.html";
+	document.getElementById('text').innerHTML = "This webpage is the last project other than the portfolio, we used object and constant combine with let and if statements to generate different result and follow up for different seletion. Various functions were made for different section and div.As CSS and HTML are used as usual, more advanced Javascript skills were used, and many of the elements and attributes were usd in to form a better looking and more useful webpage.";
+}
+	 function showResult() {
+    let result = 0; // Initialize result variable
+    // JavaScript functions for menu options and result submission
+
+    if (document.getElementById("1").checked) {
+        alert("You choosed About Me!")
+    }
+    if (document.getElementById("2").checked) {
+        alert("You choosed Favorite Animal!")
+    }
+    if (document.getElementById("3").checked) {
+        alert("You choosed Call for Actions!")
+    }
+    if (document.getElementById("4").checked) {
+        alert("You choosed Collector Guide!")
+    }
+    if (document.getElementById("5").checked) {
+        alert("You choosed Anonymity!")
+    }
+    if (document.getElementById("6").checked) {
+        alert("You choosed Treasure Hunt!")
+    }
+    if (document.getElementById("7").checked) {
+        alert("You choosed Buzzquiz!")
+    }
+    if (document.getElementById("8").checked) {
+        alert("You choosed Travel Guide!")
+    }
+}
+
+	</script>
+</html>

@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e1f0f0;
+}
+
+header {
+    background-color: #c7cbf0;
+    color: #3945ad;
+    text-align: center;
+    padding: 1em 0;
+    animation: fadeIn 2s;
+}
+
+h1 {
+    text-align: center;
+    font-size: 75px;
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Move from left */
+        opacity: 0; /* Start with zero opacity */
+    }
+    to {
+        transform: translateX(0); /* Move to original position */
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+.menu {
+    background-color: #dfe0eb;
+    color: #3945ad;
+    padding: 10px;
+    margin-left: 100px;
+    width: 250px;
+    float: left;
+    height: 100%;
+    border: solid;
+    border-color: #c7cbf0;
+    border-radius: 25px;
+    border-width: 10px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+.menu h2 {
+    margin-top: 0;
+}
+
+.menu p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+}
+
+.menu p:hover {
+    background-color: #c7cbf0;
+    color: #5147a6;
+    font-size: 20px;/* Increase font size on hover */
+}
+
+.info {
+    margin-left: 450px;
+    margin-right: 100px;
+    padding: 10px;
+}
+.info p{
+    font-size: 20px;
+}
+.frame {
+    margin-left: 450px;
+    padding: 10px;
+    transition: opacity 0.5s;
+}
+
+iframe{
+    border: solid;
+    border-color: #c7cbf0;
+    border-radius: 25px;
+    border-width: 5px;
+}
+iframe:hover{/* Hover effect for menu items */
+    animation: fadeInScale 3s forwards;
+}
+
+@keyframes fadeIn {
+    from { size:800*600 }
+    to { size: 840*630 }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 1; /* full opacity */
+        transform: scale(0.95); /* maller size */
+    }
+    to {
+        opacity: 1; /* End with full opacity */
+        transform: scale(1); /* End with original size */
+    }
+}
+.option {
+    margin-left: 100px; /* Adjusted margin to align with the menu */
+    padding: 10px;
+    border: 10px solid #c7cbf0; /* Added border to all sides */
+    border-radius: 25px; /* Added border-radius for rounded corners */
+   text-align: center;
+}
+
+.option ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.option li {
+    margin-bottom: 10px;
+}
+
+.option label {
+    cursor: pointer;
+}
+
+.option label:hover {
+    color: #5147a6;
+    font-size: 20px;
+}
+
